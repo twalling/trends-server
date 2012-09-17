@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Trending</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Trending</h1>
+      <ul class="thumbnails">
+        <% for (var i=0; i < posts.length; i++) { %>
+        <li class="span4">
+          <div class="thumbnail">
+            <% if (posts[i].media) { %>
+            <img src="<%= posts[i].media %>"/>
+            <% } %>
+
+            <% if (posts[i].title) { %>
+            <h3><%= posts[i].title %></h3>
+            <% } %>
+            
+            <small>source: <%= posts[i].type %></small><br/>
+            <small>date: <%= posts[i].date %></small>
+            </div>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+  </body>
+</html>

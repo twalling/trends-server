@@ -4,9 +4,14 @@
   "dependencies": {
     "mongoose": "2.5.7",
     "underscore": "1.3.3",
-    "trend-common": "https://github.com/twalling/trend-common/tarball/master"
+    "express": "3.x",
+    "ejs": "0.8.3",
+    "trend-common": "https://github.com/twalling/trends-common/tarball/master"
   },
   "engines": {
     "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "start": "node src/server.js"
   }
 }
