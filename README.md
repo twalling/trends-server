@@ -37,7 +37,9 @@ Snippet from package.json:
       }
     }
 
-## Installation
+It's also worth noting the use of `npm link` below in the install instructions. This creates symlinks locally so that any development work on `trends-common` is picked up by the other projects. Otherwise one would have to push the latest changes to their github repo everytime they want to see these changes in their server or workers projects.
+
+## Install
 
     git clone git@github.com:twalling/trends-common.git
     git clone git@github.com:twalling/trends-server.git
