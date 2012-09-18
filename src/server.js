@@ -8,7 +8,7 @@ var Post = common.models.Post;
 var app = express();
 app.configure(function(){
   app.set('port', process.env.PORT || config.port);
-  app.set('views', __dirname + '/views');
+  app.set('views', path.join(__dirname, '/views'));
   app.set('view engine', 'ejs');
   app.use(express.favicon());
   app.use(express.logger('dev'));
@@ -19,14 +19,18 @@ app.get('/', function(req, res) {
   Post.findMostRecent(function(err, results) {
     if (err) {
       console.log(err);
-      res.send(500, 'error retrieving results');
-    } else {
-      res.render('index', { posts: results });
+      return res.send(500, 'error retrieving results');
     }
+    res.render('index', {
+      posts: results
+    });
   });
 });
 
-common.lib.mongo.connectToMongo(config.mongodb, function() {
+common.lib.mongo.connectToMongo(config.mongodb, function(err) {
+  if (err) {
+    throw err;
+  }
   console.log('Connected to Mongo');
 });
 
