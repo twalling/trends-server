@@ -8,10 +8,11 @@ The overall application is broken up into a common lib, a server and a workers a
 * server - [source](https://github.com/twalling/trends-server)
 * workers - [source](https://github.com/twalling/trends-workers)
 
+Slides from a presentation covering the ideas behind this approach can be found at [Sharing Code Between Node.js Applications](http://life.neophi.com/danielr/2012/09/sharing_code_between_nodejs_ap.html).
+
 ## Demo
 
 The server project is currently running at: [http://trends-server.herokuapp.com](http://trends-server.herokuapp.com)
-
 
 ## Common
 
@@ -68,7 +69,6 @@ After setting up the config or the bootstrap script mentioned above, simply run 
     
     cd trends-server
     npm start
-
 
 If you're using the bootstrap script method:
 
