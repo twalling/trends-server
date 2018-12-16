@@ -12,7 +12,7 @@ Slides from a presentation covering the ideas behind this approach can be found 
 
 ## Demo
 
-The server project is currently running at: [http://trends-server.herokuapp.com](http://trends-server.herokuapp.com)
+The server project is currently running at: No longer up
 
 ## Common
 
