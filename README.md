@@ -76,7 +76,3 @@ If you're using the bootstrap script method:
     ./bootstrap.sh
 
 After the workers have run the jobs at least one time you should be able to browse to your local server project ([http://localhost:3000](http://localhost:3000)) and view the latest results from Instagram and Twitter.
-
-## Deploying to Heroku
-
-Coming soon...
